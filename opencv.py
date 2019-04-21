@@ -3,7 +3,7 @@ import os
 
 cap = cv2.VideoCapture(0)
 
-pathOut = 'abcd'
+pathOut = 'detections'
 
 count = 0       #count of the frames captured
 avg = 0         #average value of all pixels in the frame
