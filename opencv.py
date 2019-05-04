@@ -34,7 +34,10 @@ while (True):
     if avgDifference < 0:
         avgDifference = avgDifference * -1;
 
-    if (avgDifference > 2):
+    #The lesser the threshold, the higher the detection sensitivity
+    threshold = 2
+    
+    if (avgDifference > threshold):
         #print('Read %d frame: ' % count, ret)
         cv2.imwrite('detection'+str(count)+'.jpg',frame)
         # save frame as JPEG file
