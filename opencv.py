@@ -26,10 +26,13 @@ while (True):
         for j in range(cols):
             k = image[i, j]
             sum = sum + k
-
+            
+    # get average of all the pixels meaning convert entire frame to one pixel
+    
     avg = sum / (rows * cols)
     #print(avg)
-
+    
+    # changes in this pixel value is what will detect motion.
     avgDifference = lastavg - avg
     if avgDifference < 0:
         avgDifference = avgDifference * -1;
